@@ -1,0 +1,261 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: Biome doesn't recognize tailwindcss directives*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-family: "Space Mono", monospace;
+  font-weight: 300;
+  --background: 0 0 98%; /* White - main background color */
+  --foreground: 24 63% 6%; /* Very dark brown (near black) - main text color */
+  --card: 0 0% 100%; /* White - card background */
+  --card-foreground: 24 63% 6%; /* Very dark brown - card text color */
+  --popover: 0 0% 100%; /* White - popover background */
+  --popover-foreground: 24 63% 6%; /* Very dark brown - popover text color */
+  --primary: 24 63% 6%; /* Very dark brown - primary brand color */
+  --primary-foreground: 20 64% 95%; /* Off-white - text on primary color */
+  --secondary: 22 69% 86%; /* Light whiteish brown - secondary background */
+  --secondary-foreground: 28 48% 16%; /* Darkwood brown - text on secondary */
+  --muted: 22 69% 86%; /* Light whiteish brown - muted/disabled background */
+  --muted-foreground: 215.4 16.3% 46.9%; /* Medium gray - muted text color */
+  --accent: 22 69% 86%; /* Light whiteish brown - accent/emphasis background */
+  --accent-foreground: 28 48% 16%; /* Darkwood brown - text on accent */
+  --destructive: 0 84.2% 60.2%; /* Bright red - destructive/error actions */
+  --destructive-foreground: 210 40% 98%; /* Off-white - text on destructive */
+  --border: 214.3 31.8% 91.4%; /* Light gray - border color */
+  --input: 214.3 31.8% 91.4%; /* Light gray - input field background */
+  --ring: 24 63% 6%; /* Very dark brown - focus ring color */
+  --chart-1: 12 76% 61%; /* Vibrant orange - chart color 1 */
+  --chart-2: 173 58% 39%; /* Teal green - chart color 2 */
+  --chart-3: 197 37% 24%; /* Dark teal blue - chart color 3 */
+  --chart-4: 43 74% 66%; /* Golden yellow - chart color 4 */
+  --chart-5: 27 87% 67%; /* Bright orange - chart color 5 */
+  --radius: 0.5rem; /* 8px - border radius value */
+  --sidebar: 0 0% 98%; /* Off-white - sidebar background */
+  --sidebar-foreground: 240 5.3% 26.1%; /* Dark gray - sidebar text */
+  --sidebar-primary: 240 5.9% 10%; /* Near black - sidebar primary */
+  --sidebar-primary-foreground: 0 0% 98%; /* Off-white - text on sidebar primary */
+  --sidebar-accent: 240 4.8% 95.9%; /* Light gray - sidebar accent */
+  --sidebar-accent-foreground: 240 5.9% 10%; /* Near black - text on sidebar accent */
+  --sidebar-border: 220 13% 91%; /* Light gray - sidebar border */
+  --sidebar-ring: 26 75% 72%; /* Bright baige - sidebar focus ring */
+
+  --driftwood-50: 20 64% 95%; /* #F5EDE6 - Lightest cream */
+  --driftwood-100: 22 69% 86%; /* #EEDBC5 - Light peach */
+  --driftwood-200: 26 75% 72%; /* #DDB88A - Warm tan */
+  --driftwood-300: 28 57% 59%; /* #C29A6B - Sandy brown */
+  --driftwood-400: 28 40% 50%; /* #B3885C - Medium brown */
+  --driftwood-500: 28 41% 44%; /* #9E7749 - Earthy brown */
+  --driftwood-600: 28 42% 35%; /* #7F5F34 - Dark driftwood */
+  --driftwood-700: 28 43% 25%; /* #5B4324 - Deep brown */
+  --driftwood-800: 28 48% 16%; /* #3C2A15 - Very dark brown */
+  --driftwood-900: 24 63% 6%; /* #191009 - Near black brown */
+}
+
+.dark {
+  --background: 28 48% 16%; /* Very dark brown - dark mode background */
+  --foreground: 210 40% 98%; /* Off-white - dark mode text */
+  --card: 28 48% 16%; /* Very dark brown - dark mode card background */
+  --card-foreground: 210 40% 98%; /* Off-white - dark mode card text */
+  --popover: 28 48% 16%; /* Very dark brown - dark mode popover background */
+  --popover-foreground: 210 40% 98%; /* Off-white - dark mode popover text */
+  --primary: 210 40% 98%; /* Off-white - dark mode primary color */
+  --primary-foreground: 28 42% 35%; /* Dark brown - dark mode text on primary */
+  --secondary: 28 42% 35%; /* Dark brown - dark mode secondary */
+  --secondary-foreground: 210 40% 98%; /* Off-white - dark mode text on secondary */
+  --muted: 28 42% 35%; /* Dark brown - dark mode muted background */
+  --muted-foreground: 215 20.2% 65.1%; /* Light gray - dark mode muted text */
+  --accent: 28 42% 35%; /* Dark brown - dark mode accent */
+  --accent-foreground: 210 40% 98%; /* Off-white - dark mode text on accent */
+  --destructive: 0 62.8% 30.6%; /* Dark red - dark mode destructive */
+  --destructive-foreground: 210 40% 98%; /* Off-white - dark mode text on destructive */
+  --border: 28 42% 35%; /* Dark brown - dark mode border */
+  --input: 28 42% 35%; /* Dark brown - dark mode input */
+  --ring: 26 75% 72%; /* Bright baige - dark mode focus ring */
+  --chart-1: 220 70% 50%; /* Blue - dark mode chart 1 */
+  --chart-2: 160 60% 45%; /* Green teal - dark mode chart 2 */
+  --chart-3: 30 80% 55%; /* Orange - dark mode chart 3 */
+  --chart-4: 280 65% 60%; /* Purple - dark mode chart 4 */
+  --chart-5: 340 75% 55%; /* Pink - dark mode chart 5 */
+  --sidebar: 240 5.9% 10%; /* Near black - dark mode sidebar */
+  --sidebar-foreground: 240 4.8% 95.9%; /* Light gray - dark mode sidebar text */
+  --sidebar-primary: 26 75% 72%; /* Light baige - dark mode sidebar primary */
+  --sidebar-primary-foreground: 24 63% 6%; /* Near black - dark mode text on sidebar primary */
+  --sidebar-accent: 240 3.7% 15.9%; /* Dark gray - dark mode sidebar accent */
+  --sidebar-accent-foreground: 240 4.8% 95.9%; /* Light gray - dark mode text on sidebar accent */
+  --sidebar-border: 240 3.7% 15.9%; /* Dark gray - dark mode sidebar border */
+  --sidebar-ring: 22 69% 86%; /* Bright blue - dark mode sidebar ring */
+}
+
+@theme {
+  --font-family: "Geist", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-driftwood-50: hsl(var(--driftwood-50));
+  --color-driftwood-100: hsl(var(--driftwood-100));
+  --color-driftwood-200: hsl(var(--driftwood-200));
+  --color-driftwood-300: hsl(var(--driftwood-300));
+  --color-driftwood-400: hsl(var(--driftwood-400));
+  --color-driftwood-500: hsl(var(--driftwood-500));
+  --color-driftwood-600: hsl(var(--driftwood-600));
+  --color-driftwood-700: hsl(var(--driftwood-700));
+  --color-driftwood-800: hsl(var(--driftwood-800));
+  --color-driftwood-900: hsl(var(--driftwood-900));
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply outline-ring/50;
+  }
+  body {
+    @apply text-foreground;
+    font-family: var(--font-family);
+    min-height: 100vh;
+  }
+}
+
+/* Custom utility classes for the design system */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .card-shadow {
+    @apply shadow-lg shadow-neutral-200/50;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary font-semibold py-3 px-6 rounded-lg border-2 border-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2;
+  }
+
+  .heading-1 {
+    @apply text-6xl sm:text-5xl lg:text-7xl font-bold text-neutral-900 leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-5xl sm:text-5xl font-bold text-neutral-900 leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl sm:text-3xl font-semibold text-neutral-800 leading-tight;
+  }
+
+  .body-text {
+    @apply text-lg text-neutral-700 leading-relaxed;
+  }
+
+  .body-text-sm {
+    @apply text-base text-neutral-600 leading-relaxed;
+  }
+
+  /* Shimmer animations for login button */
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer-delayed {
+    animation: shimmer 2s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+}
+
+/* Custom keyframes for shimmer effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Coffee cup wave animations */
+@keyframes coffee-wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes coffee-wave-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Progress bar wave animation */
+@keyframes progress-wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-coffee-wave {
+    animation: coffee-wave 3s ease-in-out infinite alternate;
+  }
+
+  .animate-coffee-wave-reverse {
+    animation: coffee-wave-reverse 3.5s ease-in-out infinite alternate;
+  }
+
+  .animate-progress-wave {
+    animation: progress-wave 2s linear infinite;
+  }
+}

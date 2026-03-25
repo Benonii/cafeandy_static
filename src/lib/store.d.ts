@@ -1,0 +1,24 @@
+type Store = {
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
+    loginPending: boolean;
+    setLoginPending: (pending: boolean) => void;
+    socialSignInPending: boolean;
+    setSocialSignInPending: (pending: boolean) => void;
+    signupPending: boolean;
+    setSignupPending: (pending: boolean) => void;
+    forgotPasswordPending: boolean;
+    setForgotPasswordPending: (pending: boolean) => void;
+    forgotPasswordEmailSent: boolean;
+    setForgotPasswordEmailSent: (sent: boolean) => void;
+    resetPasswordPending: boolean;
+    setResetPasswordPending: (pending: boolean) => void;
+    passwordReset: boolean;
+    setPasswordReset: (reset: boolean) => void;
+    showPassword: boolean;
+    setShowPassword: (show: boolean) => void;
+    showConfirmPassword: boolean;
+    setShowConfirmPassword: (show: boolean) => void;
+};
+declare const useStore: import("zustand").UseBoundStore<import("zustand").StoreApi<Store>>;
+export default useStore;
