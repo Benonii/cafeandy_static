@@ -7,13 +7,13 @@ import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 
 const Hero = () => {
 	// Animated counters
-	const followers = useAnimatedCounter(250000, 27000, 20000);
+	const followers = useAnimatedCounter(245000, 27000, 20000);
 	const likes = useAnimatedCounter(1000000, 10000, 20000);
 	const shares = useAnimatedCounter(100000, 1000, 20000);
 	const budget = useAnimatedCounter(43000, 5000, 20000);
 
 	// Coffee cup fill level (0–250K followers maps to 0–100% fill)
-	const fillPercentage = (followers / 250000) * 100;
+	const fillPercentage = (followers / 245000) * 100;
 
 	return (
 		<section className="w-full min-h-screen bg-linear-to-b from-driftwood-100 via-driftwood-50 to-white flex items-start font-(--font-family)">
